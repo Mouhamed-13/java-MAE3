@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="567.0" prefWidth="677.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetudiant.C_classe">
+   <children>
+      <Label layoutX="465.0" layoutY="15.0" prefHeight="17.0" prefWidth="109.0" text="Annee">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbo_AnneeScolaire" layoutX="520.0" layoutY="11.0" prefWidth="150.0" />
+      <Text layoutX="36.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des classes">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="435.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des Etudiants">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblv_Classe" layoutX="22.0" layoutY="162.0" onMouseClicked="#handleListeEtudiantParClasse" prefHeight="376.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tblc_Id" prefWidth="97.66665649414062" text="ID" />
+          <TableColumn fx:id="tblc_Libelle" prefWidth="101.33334350585938" text="Libelle" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblv_etudiant" layoutX="334.0" layoutY="162.0" prefHeight="376.0" prefWidth="332.0">
+         <columns>
+            <TableColumn fx:id="tblc_matricule" prefWidth="156.0" text="Matricule" />
+            <TableColumn fx:id="tblc_nomPrenom" prefWidth="175.0" text="Nom et Prenom" />
+         </columns>
+      </TableView>
+      <Pane fx:id="pane_addClasse" layoutX="14.0" layoutY="8.0" prefHeight="86.0" prefWidth="293.0">
+         <children>
+            <Label layoutX="19.0" layoutY="8.0" prefHeight="17.0" prefWidth="109.0" text="Libelle">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_Libelle" layoutX="72.0" layoutY="4.0" />
+            <Button layoutX="234.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleInsertClasse" text="OK" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

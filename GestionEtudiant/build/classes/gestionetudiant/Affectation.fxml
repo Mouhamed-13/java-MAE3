@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionetudiant.AffectationController">
+   <children>
+      <Text layoutX="173.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Affectation du professeur" underline="true">
+         <font>
+            <Font name="Arial" size="28.0" />
+         </font>
+      </Text>
+      <Label layoutX="425.0" layoutY="73.0" prefHeight="17.0" prefWidth="109.0" text="Annee">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbo_annee" layoutX="480.0" layoutY="69.0" prefWidth="150.0" />
+      <Label layoutX="84.0" layoutY="123.0" text="NCI">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nci" layoutX="171.0" layoutY="124.0" prefHeight="25.0" prefWidth="271.0" />
+      <Button layoutX="460.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleSearchProf" text="OK" />
+      <Label layoutX="84.0" layoutY="178.0" text="Nom">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_nom" layoutX="171.0" layoutY="179.0" prefHeight="25.0" prefWidth="271.0" />
+      <Label layoutX="84.0" layoutY="233.0" text="Classe">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbo_classe" layoutX="171.0" layoutY="234.0" prefHeight="25.0" prefWidth="271.0" />
+      <Label layoutX="84.0" layoutY="290.0" text="Matieres enseignees">
+         <font>
+            <Font name="Arial Bold" size="22.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cbo_matEns" layoutX="316.0" layoutY="291.0" prefHeight="25.0" prefWidth="128.0" />
+      <Button fx:id="btn_add" layoutX="457.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleAddMat" text="ADD" />
+      <TableView fx:id="tblv_mat" layoutX="200.0" layoutY="324.0" prefHeight="165.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="tblc_mat" prefWidth="199.0" text="MATIERES" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_affect" layoutX="429.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleAffectProf" text="Affecter">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
